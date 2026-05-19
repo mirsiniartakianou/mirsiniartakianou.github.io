@@ -1,92 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mirsini Artakianou</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirsini Artakianou</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: white;
-      color: black;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: white;
+  color: black;
+}
 
-    nav {
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: white;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-      font-size: 18px;
-    }
+nav a {
+  text-decoration: none;
+  color: black;
+}
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+.hero h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 0;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
+/* WORKS */
+section {
+  padding: 120px 40px;
+}
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
 
-    .cv {
-      max-width: 800px;
-      margin: auto;
-      padding: 40px;
-      line-height: 1.7;
-    }
-  </style>
+.gallery img {
+  width: 100%;
+  display: block;
+}
+
+/* CV */
+.cv {
+  max-width: 700px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.8;
+}
+</style>
+
 </head>
 
 <body>
 
 <nav>
-  <a href="#works">Works</a>
-  <a href="#cv">CV</a>
+  <div>MIRSINI ARTAKIANOU</div>
+  <div>
+    <a href="#works">WORKS</a>
+    <a href="#cv">CV</a>
+  </div>
 </nav>
 
-<header>
-  <h1>Mirsini Artakianou</h1>
-  <p>Artist</p>
-</header>
+<div class="hero">
+  <h1>Artist</h1>
+</div>
 
 <section id="works">
   <div class="gallery">
 
-    <img src="https://picsum.photos/600/800?1">
-    <img src="https://picsum.photos/600/800?2">
-    <img src="https://picsum.photos/600/800?3">
+    <!-- PLACEHOLDER IMAGES -->
+    <img src="https://picsum.photos/800/1000?1">
+    <img src="https://picsum.photos/800/1000?2">
+    <img src="https://picsum.photos/800/1000?3">
+    <img src="https://picsum.photos/800/1000?4">
 
   </div>
 </section>
 
 <section id="cv">
   <div class="cv">
+
     <h2>CV</h2>
 
-    <p>
-      Add your exhibitions, education, publications and projects here.
-    </p>
+    <p><b>Education</b><br>
+    Add your studies here</p>
+
+    <p><b>Exhibitions</b><br>
+    Add exhibitions here</p>
+
+    <p><b>Projects</b><br>
+    Add projects here</p>
 
   </div>
 </section>
