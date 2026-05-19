@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<section id="cv">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mirsini Artakianou</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  background: white;
-  color: black;
+.split {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.split > div {
+  flex: 1;
+  min-width: 300px;
 }
 
 /* NAV */
@@ -92,10 +97,30 @@ section {
   <div class="gallery">
 
     <!-- PLACEHOLDER IMAGES -->
-    <img src="https://picsum.photos/800/1000?1">
-    <img src="https://picsum.photos/800/1000?2">
-    <img src="https://picsum.photos/800/1000?3">
-    <img src="https://picsum.photos/800/1000?4">
+   <section class="split">
+
+  <div id="works">
+    <h2>Works</h2>
+
+    <div class="gallery">
+      <img src="https://picsum.photos/800/1000?1">
+      <img src="https://picsum.photos/800/1000?2">
+      <img src="https://picsum.photos/800/1000?3">
+      <img src="https://picsum.photos/800/1000?4">
+    </div>
+  </div>
+
+  <div id="cv">
+    <h2>CV</h2>
+
+    <p><b>Education</b><br>
+    Add your studies here</p>
+
+    <p><b>Exhibitions</b><br>
+    Add exhibitions here</p>
+
+    <p><b>Projects</b><br>
+    Add projects here</p>
 
   </div>
 </section>
