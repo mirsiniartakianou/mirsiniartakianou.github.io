@@ -1,62 +1,50 @@
 <!DOCTYPE html>
-<section id="cv">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mirsini Artakianou</title>
 
 <style>
-.split {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: white;
+  color: black;
 }
 
-.split > div {
-  flex: 1;
-  min-width: 300px;
-}
-
-/* NAV */
+/* TOP NAV */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 25px 40px;
   display: flex;
   justify-content: space-between;
+  padding: 25px 40px;
   font-size: 14px;
   letter-spacing: 1px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: white;
+  border-bottom: 1px solid #eee;
 }
 
 nav a {
   text-decoration: none;
   color: black;
+  margin-left: 20px;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 50px;
-  font-weight: 300;
-  margin: 0;
-}
-
-/* WORKS */
+/* SECTIONS */
 section {
-  padding: 120px 40px;
+  display: none;
+  padding: 120px 40px 60px 40px;
 }
 
+/* ACTIVE SECTION */
+section.active {
+  display: block;
+}
+
+/* WORKS GRID */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -65,82 +53,69 @@ section {
 
 .gallery img {
   width: 100%;
-  display: block;
 }
 
 /* CV */
 .cv {
   max-width: 700px;
-  margin: auto;
   font-size: 14px;
   line-height: 1.8;
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-  <div>MIRSINI ARTAKIANOU</div>
   <div>
-    <a href="#works">WORKS</a>
-    <a href="#cv">CV</a>
+    <a href="#" onclick="showPage('works')">Mirsini Artakianou</a>
+  </div>
+
+  <div>
+    <a href="#" onclick="showPage('works')">Works</a>
+    <a href="#" onclick="showPage('workshops')">Workshops</a>
+    <a href="#" onclick="showPage('cv')">CV</a>
   </div>
 </nav>
 
-<div class="hero">
-  <h1>Artist</h1>
-</div>
-
-<section id="works">
+<!-- WORKS (HOME PAGE) -->
+<section id="works" class="active">
   <div class="gallery">
-
-    <!-- PLACEHOLDER IMAGES -->
-   <section class="split">
-
-  <div id="works">
-    <h2>Works</h2>
-
-    <div class="gallery">
-      <img src="https://picsum.photos/800/1000?1">
-      <img src="https://picsum.photos/800/1000?2">
-      <img src="https://picsum.photos/800/1000?3">
-      <img src="https://picsum.photos/800/1000?4">
-    </div>
-  </div>
-
-  <div id="cv">
-    <h2>CV</h2>
-
-    <p><b>Education</b><br>
-    Add your studies here</p>
-
-    <p><b>Exhibitions</b><br>
-    Add exhibitions here</p>
-
-    <p><b>Projects</b><br>
-    Add projects here</p>
-
+    <img src="https://picsum.photos/800/1000?1">
+    <img src="https://picsum.photos/800/1000?2">
+    <img src="https://picsum.photos/800/1000?3">
+    <img src="https://picsum.photos/800/1000?4">
   </div>
 </section>
 
+<!-- WORKSHOPS -->
+<section id="workshops">
+  <h2>Workshops</h2>
+  <p>Add your workshops here.</p>
+</section>
+
+<!-- CV -->
 <section id="cv">
   <div class="cv">
-
     <h2>CV</h2>
 
     <p><b>Education</b><br>
-    Add your studies here</p>
+    Add here</p>
 
     <p><b>Exhibitions</b><br>
-    Add exhibitions here</p>
-
-    <p><b>Projects</b><br>
-    Add projects here</p>
-
+    Add here</p>
   </div>
 </section>
+
+<script>
+function showPage(page) {
+  document.querySelectorAll('section').forEach(s => {
+    s.classList.remove('active');
+  });
+
+  document.getElementById(page).classList.add('active');
+}
+</script>
 
 </body>
 </html>
